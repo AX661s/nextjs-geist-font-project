@@ -1,0 +1,160 @@
+:root {
+        /*_________________________________*/
+        /* 现代化颜色管理系统 - MODERN COLOR SYSTEM */
+        /*_________________________________*/
+
+        /* ============ 基础背景色 - Base Backgrounds ============ */
+        --base_background: #0f172a;                    /* 深蓝黑色 - 主背景 */
+        --base_top-bar-navigation: #1e293b;            /* 深灰蓝色 - 顶部导航栏 */
+        --base_secondary-navigation-bar: #1e293b;      /* 次级导航栏 */
+        --base_wallet-sidebar-and-popup: #1e293b;      /* 钱包侧边栏和弹出框 */
+        --base_footer: #0f172a;                        /* 页脚 */
+
+        /* ============ 文字和图形标签 - Labels & Text ============ */
+        --labels_important-active-labels-text-graphics: #f1f5f9;    /* 主要活跃文字 */
+        --labels_secondary-inactive-label-text-graphics: #94a3b8;   /* 次要非活跃文字 */
+        --calculated_important-border: #334155;                      /* 重要边框 */
+        --calculated_secondary-border: #1e293b;                      /* 次要边框 */
+        --calculated_footer_border: #334155;                         /* 页脚边框 */
+        --calculated_super-pale_label-text-graphics: #475569;        /* 超淡文字 */
+        --labels_fields: #334155;                                    /* 表单字段背景 */
+        --labels_inactive-button: #64748b;                           /* 非活跃按钮 */
+
+        /* ============ 交易相关颜色 - Trading Colors ============ */
+        --trading_selling-related-elements: #ef4444;                /* 卖出红色 - 现代化 */
+        --trading_buying-related-elements: #10b981;                 /* 买入绿色 - 现代化 */
+
+        /* ============ 特殊元素颜色 - Special Elements ============ */
+        --specials_buttons-links-and-highlights: #3b82f6;          /* 按钮链接高亮 - 现代蓝 */
+        --specials_buttons-links-and-highlights-2: #60a5fa;        /* 次级高亮 */
+        --specials_chat-messages: #6ee7b7;                         /* 聊天消息 */
+        --specials_my-username-in-chat: #fbbf24;                   /* 我的用户名 */
+        --specials_checks-okay-done: #10b981;                      /* 成功检查 */
+        --specials_pending-waiting-caution: #f59e0b;               /* 等待警告 */
+        --specials_notifications-alerts-warnings: #ef4444;         /* 通知警告 */
+        --specials_quick-trade-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        /*_________________________________*/
+        /* 计算颜色 - Calculated Colors */
+        /*_________________________________*/
+
+        /* ============ 背景和叠加 - Backgrounds & Overlays ============ */
+        --calculated_tag-background: #334155aa;
+        --calculated_background-overlay: rgba(15, 23, 42, 0.85);
+        --calculated_stake-table_highlight: #1e293baa;
+        --calculated_trade-block_highlight: #1e293bfa;
+        --calculated_market-card_gradient_background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        
+        /* ============ 交易订单簿颜色 - Trading Orderbook ============ */
+        --calculated_trading_selling-subtracted-bg: rgba(239, 68, 68, 0.2);
+        --calculated_trading_selling-added-bg: rgba(239, 68, 68, 0.3);
+        --calculated_trading_selling-best-subtracted: rgba(239, 68, 68, 0.4);
+        --calculated_trading_buying-subtracted-bg: rgba(16, 185, 129, 0.2);
+        --calculated_trading_buying-added-bg: rgba(16, 185, 129, 0.3);
+        --calculated_trading_buying-best-subtracted: rgba(16, 185, 129, 0.4);
+        
+        /* ============ 公开交易 - Public Sale ============ */
+        --calculated_public-sale_buying-zeros: rgba(16, 185, 129, 0.3);
+        --calculated_public-sale_selling-zeros: rgba(239, 68, 68, 0.3);
+        
+        /* ============ 图表相关 - Charts ============ */
+        --calculated_trading_selling-sparkline-fill: rgba(239, 68, 68, 0.3);
+        --calculated_trading_buying-sparkline-fill: rgba(16, 185, 129, 0.3);
+        --calculated_trading_selling-orderbook-bar: rgba(239, 68, 68, 0.12);
+        --calculated_trading_buying-orderbook-bar: rgba(16, 185, 129, 0.12);
+        --calculated_trading_selling-orderbook-hover: rgba(239, 68, 68, 0.25);
+        --calculated_trading_buying-orderbook-hover: rgba(16, 185, 129, 0.25);
+        --calculated_trading-orderbook-text: #f1f5f9;
+        --calculated_trading-orderbook-secondary-text: #94a3b8;
+        --calculated_trading_buying-related-text: #10b981;
+        --calculated_trading_selling-related-text: #ef4444;
+        
+        /* ============ 模态框和页面 - Modals & Pages ============ */
+        --calculated_base_modal-overlay: rgba(15, 23, 42, 0.85);
+        --calculated_landing_background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        --calculated_landing_markets_table: #1e293bf0;
+        --calculated_specials_highlight-box: rgba(59, 130, 246, 0.1);
+        
+        /* ============ 导航和页脚文字 - Nav & Footer Text ============ */
+        --calculated_base_top-bar-navigation_text: #f1f5f9;
+        --calculated_base_top-bar-navigation_text-inactive: #94a3b8;
+        --calculated_base_footer_text: #94a3b8;
+        
+        /* ============ 图表视图 - TradingView ============ */
+        --calculated_trad-view_watermark: rgba(255, 255, 255, 0.05);
+        --calculated_trad-view_axis: rgba(255, 255, 255, 0.3);
+        --calculated_trad-view_text: rgba(255, 255, 255, 0.8);
+        
+        /* ============ 通知状态 - Notification States ============ */
+        --calculated_specials_notifications-alerts-inactive: rgba(239, 68, 68, 0.5);
+        --calculated_specials_notifications-alerts-pale: rgba(239, 68, 68, 0.12);
+        --calculated_specials_notifications-alerts-text: #ffffff;
+        --calculated_specials_notifications-pending-text: #ffffff;
+        --calculated_specials_notifications-success-text: #ffffff;
+        --calculated_notification-pending-disabled: rgba(245, 158, 11, 0.3);
+        --calculated_notifications-blue-disabled: rgba(59, 130, 246, 0.3);
+
+        /* ============ 快速交易 - Quick Trade ============ */
+        --calculated_quick_trade-bg: #1e293b;
+        --calculated_quick_trade-gradient: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+
+        /*_________________________________*/
+        /* 其他设置 - Additional Settings */
+        /*_________________________________*/
+        --dark-accordion-arrow-active: #3b82f6;
+}
+
+/* ============ 浅色主题 - Light Theme (Optional) ============ */
+[data-theme="light"] {
+        --base_background: #ffffff;
+        --base_top-bar-navigation: #f8fafc;
+        --base_secondary-navigation-bar: #f1f5f9;
+        --base_wallet-sidebar-and-popup: #f8fafc;
+        --base_footer: #0f172a;
+
+        --labels_important-active-labels-text-graphics: #0f172a;
+        --labels_secondary-inactive-label-text-graphics: #64748b;
+        --calculated_important-border: #e2e8f0;
+        --calculated_secondary-border: #f1f5f9;
+        --labels_fields: #f8fafc;
+
+        --calculated_base_modal-overlay: rgba(255, 255, 255, 0.9);
+        --calculated_background-overlay: rgba(255, 255, 255, 0.85);
+}
+
+/* ============ 现代化渐变背景 - Modern Gradient Backgrounds ============ */
+.gradient-bg-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-bg-success {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.gradient-bg-danger {
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.gradient-bg-dark {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* ============ 玻璃态效果 - Glassmorphism ============ */
+.glass-morphism {
+        background: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============ 霓虹发光效果 - Neon Glow ============ */
+.neon-blue {
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.5), 0 0 30px rgba(59, 130, 246, 0.3);
+}
+
+.neon-green {
+        box-shadow: 0 0 15px rgba(16, 185, 129, 0.5), 0 0 30px rgba(16, 185, 129, 0.3);
+}
+
+.neon-red {
+        box-shadow: 0 0 15px rgba(239, 68, 68, 0.5), 0 0 30px rgba(239, 68, 68, 0.3);
+}
