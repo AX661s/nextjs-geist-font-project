@@ -87,3 +87,7 @@ hollaex-original/.git/objects/pack/pack-d6b470208230bfc191252aab2c7b178a24fdcd41
 # Environment files
 *.env
 *.env.*
+-e 
+# Environment files
+*.env
+*.env.*
