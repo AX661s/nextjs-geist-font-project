@@ -1,29 +1,61 @@
 @import '../../variables';
+@import '../../modern-variables';
 
 .holla-button {
 	width: 100%;
-	font-size: $font-size-subtext;
-	padding: 0 4px;
-	background-color: $colors-notifications-blue !important;
+	font-size: $font-size-sm;
+	padding: $spacing-3 $spacing-4;
+	background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+	border-radius: $border-radius-md !important;
+	box-shadow: $shadow-sm;
+	transition: $transition-smooth;
+	font-weight: $font-weight-medium;
+	border: none !important;
+	
+	&:hover:not(.disabled) {
+		transform: translateY(-1px);
+		box-shadow: $shadow-glow, $shadow-md;
+		background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+	}
+	
+	&:active:not(.disabled) {
+		transform: translateY(0);
+		box-shadow: $shadow-sm;
+	}
 
 	&.button-success {
-		background-color: $colors-notifications-green !important;
+		background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+		
+		&:hover:not(.disabled) {
+			box-shadow: $shadow-glow-green, $shadow-md;
+			background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+		}
 	}
 
 	&.button-fail {
-		background-color: $colors-notifications-red !important;
+		background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+		
+		&:hover:not(.disabled) {
+			box-shadow: $shadow-glow-red, $shadow-md;
+			background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%) !important;
+		}
 	}
 
 	&.disabled {
-		background-color: $colors-deactivate-color4 !important;
+		background: $dark-bg-tertiary !important;
+		opacity: 0.5;
+		cursor: not-allowed;
+		transform: none !important;
+		box-shadow: none !important;
 
 		.button-icon {
-			display: none;
+			opacity: 0.5;
 			svg {
-				fill: rgba(0, 0, 0, 0.38) !important;
+				fill: rgba(255, 255, 255, 0.38) !important;
 			}
 		}
 	}
+	
 	&:active,
 	&:focus {
 		outline: none;
