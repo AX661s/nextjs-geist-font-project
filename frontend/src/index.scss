@@ -2,6 +2,8 @@
 @import 'fonts';
 @import 'mixins';
 @import 'common';
+@import 'modern-variables';
+@import 'modern-components';
 
 @import './containers/containers';
 @import './components/components';
@@ -9,6 +11,7 @@
 html {
 	font-size: 12px !important;
 	height: 100%;
+	scroll-behavior: smooth;
 }
 
 #root {
@@ -21,7 +24,25 @@ body {
 	color: $colors-main-black;
 	font-size: $font-size-main !important;
 	font-family: $en--font-family !important;
-	transition: all 0.3s;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	
+	// 现代化滚动条
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+	
+	&::-webkit-scrollbar-track {
+		background: #0f172a;
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		background: #334155;
+		border-radius: 5px;
+		
+		&:hover {
+			background: #3b82f6;
+		}
+	}
 }
 
 // .ham_menu_item{
