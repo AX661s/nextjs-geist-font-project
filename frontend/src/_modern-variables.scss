@@ -1,0 +1,208 @@
+// ===================================
+// MODERN HOLLAEX - 现代化变量系统
+// ===================================
+
+// ============ 断点 (Breakpoints) ============
+$bp-xs: 575px;
+$bp-sm: 767px;
+$bp-md: 991px;
+$bp-lg: 1199px;
+$bp-xl: 1400px;
+
+// ============ 现代化圆角系统 ============
+$border-radius-sm: 0.375rem;    // 6px - 小圆角
+$border-radius-md: 0.5rem;      // 8px - 中等圆角
+$border-radius-lg: 0.75rem;     // 12px - 大圆角
+$border-radius-xl: 1rem;        // 16px - 超大圆角
+$border-radius-2xl: 1.5rem;     // 24px - 卡片圆角
+$border-radius-full: 9999px;    // 完全圆形
+
+// ============ 现代化阴影系统 ============
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+$shadow-glow: 0 0 15px rgba(59, 130, 246, 0.3);
+$shadow-glow-green: 0 0 15px rgba(16, 185, 129, 0.3);
+$shadow-glow-red: 0 0 15px rgba(239, 68, 68, 0.3);
+
+// ============ 现代化间距系统 ============
+$spacing-0: 0;
+$spacing-1: 0.25rem;   // 4px
+$spacing-2: 0.5rem;    // 8px
+$spacing-3: 0.75rem;   // 12px
+$spacing-4: 1rem;      // 16px
+$spacing-5: 1.25rem;   // 20px
+$spacing-6: 1.5rem;    // 24px
+$spacing-8: 2rem;      // 32px
+$spacing-10: 2.5rem;   // 40px
+$spacing-12: 3rem;     // 48px
+$spacing-16: 4rem;     // 64px
+$spacing-20: 5rem;     // 80px
+
+// ============ 现代化动画 ============
+$transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+// ============ 现代化颜色系统 ============
+
+// 主色调 - 现代蓝色渐变
+$primary-50: #eff6ff;
+$primary-100: #dbeafe;
+$primary-200: #bfdbfe;
+$primary-300: #93c5fd;
+$primary-400: #60a5fa;
+$primary-500: #3b82f6;
+$primary-600: #2563eb;
+$primary-700: #1d4ed8;
+$primary-800: #1e40af;
+$primary-900: #1e3a8a;
+
+// 成功色 - 现代绿色
+$success-50: #ecfdf5;
+$success-100: #d1fae5;
+$success-200: #a7f3d0;
+$success-300: #6ee7b7;
+$success-400: #34d399;
+$success-500: #10b981;
+$success-600: #059669;
+$success-700: #047857;
+$success-800: #065f46;
+$success-900: #064e3b;
+
+// 错误色 - 现代红色
+$danger-50: #fef2f2;
+$danger-100: #fee2e2;
+$danger-200: #fecaca;
+$danger-300: #fca5a5;
+$danger-400: #f87171;
+$danger-500: #ef4444;
+$danger-600: #dc2626;
+$danger-700: #b91c1c;
+$danger-800: #991b1b;
+$danger-900: #7f1d1d;
+
+// 警告色 - 现代黄色
+$warning-50: #fefce8;
+$warning-100: #fef9c3;
+$warning-200: #fef08a;
+$warning-300: #fde047;
+$warning-400: #facc15;
+$warning-500: #eab308;
+$warning-600: #ca8a04;
+$warning-700: #a16207;
+$warning-800: #854d0e;
+$warning-900: #713f12;
+
+// 深色主题配色
+$dark-bg-primary: #0f172a;      // 深蓝黑色
+$dark-bg-secondary: #1e293b;    // 深灰蓝色
+$dark-bg-tertiary: #334155;     // 中灰蓝色
+$dark-bg-elevated: #1e293b;     // 浮起的卡片背景
+$dark-bg-overlay: rgba(15, 23, 42, 0.85);
+
+$dark-text-primary: #f1f5f9;    // 主文字
+$dark-text-secondary: #94a3b8;  // 次要文字
+$dark-text-tertiary: #64748b;   // 三级文字
+$dark-text-disabled: #475569;   // 禁用文字
+
+$dark-border-primary: #334155;
+$dark-border-secondary: #1e293b;
+$dark-border-subtle: #1e293b;
+
+// 浅色主题配色
+$light-bg-primary: #ffffff;
+$light-bg-secondary: #f8fafc;
+$light-bg-tertiary: #f1f5f9;
+$light-bg-elevated: #ffffff;
+$light-bg-overlay: rgba(255, 255, 255, 0.9);
+
+$light-text-primary: #0f172a;
+$light-text-secondary: #475569;
+$light-text-tertiary: #64748b;
+$light-text-disabled: #cbd5e1;
+
+$light-border-primary: #e2e8f0;
+$light-border-secondary: #f1f5f9;
+$light-border-subtle: #f8fafc;
+
+// ============ 渐变色系统 ============
+$gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
+$gradient-danger: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+$gradient-warm: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+$gradient-cool: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+$gradient-dark: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+$gradient-trading-buy: linear-gradient(135deg, #10b981 0%, #059669 100%);
+$gradient-trading-sell: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+
+// ============ Z-Index 层级 ============
+$z-base: 0;
+$z-dropdown: 1000;
+$z-sticky: 1020;
+$z-fixed: 1030;
+$z-modal-backdrop: 1040;
+$z-modal: 1050;
+$z-popover: 1060;
+$z-tooltip: 1070;
+
+// ============ 字体系统 ============
+$font-family-base: 'Inter', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+$font-family-mono: 'Fira Code', 'Consolas', 'Monaco', monospace;
+$font-family-heading: 'Inter', 'Raleway', sans-serif;
+
+$font-size-xs: 0.75rem;      // 12px
+$font-size-sm: 0.875rem;     // 14px
+$font-size-base: 1rem;       // 16px
+$font-size-lg: 1.125rem;     // 18px
+$font-size-xl: 1.25rem;      // 20px
+$font-size-2xl: 1.5rem;      // 24px
+$font-size-3xl: 1.875rem;    // 30px
+$font-size-4xl: 2.25rem;     // 36px
+$font-size-5xl: 3rem;        // 48px
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// ============ 交易相关颜色 ============
+$trading-buy: $success-500;
+$trading-buy-hover: $success-600;
+$trading-buy-light: $success-100;
+$trading-buy-glow: $shadow-glow-green;
+
+$trading-sell: $danger-500;
+$trading-sell-hover: $danger-600;
+$trading-sell-light: $danger-100;
+$trading-sell-glow: $shadow-glow-red;
+
+// ============ 组件特定变量 ============
+$button-height-sm: 2rem;
+$button-height-md: 2.5rem;
+$button-height-lg: 3rem;
+
+$input-height-sm: 2rem;
+$input-height-md: 2.5rem;
+$input-height-lg: 3rem;
+
+$card-padding-sm: $spacing-3;
+$card-padding-md: $spacing-4;
+$card-padding-lg: $spacing-6;
+
+// ============ 导航栏高度 ============
+$navbar-height: 4rem;
+$navbar-height-mobile: 3.5rem;
+
+// ============ 侧边栏宽度 ============
+$sidebar-width: 16rem;
+$sidebar-width-collapsed: 4rem;
