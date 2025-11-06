@@ -51,11 +51,61 @@ export function verifyVerificationCode(data) {
 	};
 }
 
-export const performLogin = (values) =>
-	axios.post('/login', values).then((res) => {
+export const performLogin = (values) => {
+	// 演示登录系统 - Demo Login System
+	const DEMO_ACCOUNTS = [
+		{
+			email: 'admin@demo.com',
+			password: 'Admin123!',
+			role: 'admin',
+			name: 'Demo Admin',
+			id: 1
+		},
+		{
+			email: 'user@demo.com',
+			password: 'User123!',
+			role: 'user',
+			name: 'Demo User',
+			id: 2
+		}
+	];
+	
+	// 检查是否是演示账号
+	const demoAccount = DEMO_ACCOUNTS.find(
+		account => account.email === values.email && account.password === values.password
+	);
+	
+	if (demoAccount) {
+		// 模拟成功登录响应
+		const mockToken = `demo_token_${demoAccount.id}_${Date.now()}`;
+		const mockResponse = {
+			data: {
+				token: mockToken,
+				user: {
+					id: demoAccount.id,
+					email: demoAccount.email,
+					username: demoAccount.name,
+					role: demoAccount.role
+				}
+			}
+		};
+		
+		// 存储演示用户信息
+		localStorage.setItem('demo_user', JSON.stringify(demoAccount));
+		localStorage.setItem('is_demo_mode', 'true');
+		
+		storeLoginResult(mockToken);
+		return Promise.resolve(mockResponse);
+	}
+	
+	// 如果不是演示账号，尝试真实登录
+	return axios.post('/login', values).then((res) => {
+		localStorage.removeItem('is_demo_mode');
+		localStorage.removeItem('demo_user');
 		storeLoginResult(res.data.token);
 		return res;
 	});
+};
 
 export const performGoogleLogin = (values) =>
 	axios.post('/login/google', values).then((res) => {
