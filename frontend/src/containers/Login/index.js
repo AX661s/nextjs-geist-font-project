@@ -21,6 +21,7 @@ import {
 	Notification,
 	EditWrapper,
 } from 'components';
+import DemoAccountInfo from 'components/DemoAccountInfo';
 import { NOTIFICATIONS } from 'actions/appActions';
 import { errorHandler } from 'components/OtpForm/utils';
 import { FLEX_CENTER_CLASSES } from 'config/constants';
