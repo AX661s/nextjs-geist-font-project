@@ -55,25 +55,33 @@ module.exports = function () {
 	return {
 		webpack: {
 			configure: (webpackConfig, { env: webpackEnv, paths }) => {
+				// Replace node-sass with sass (Dart Sass)
+				const sassRule = webpackConfig.module.rules.find(
+					rule => rule.oneOf
+				);
+				
+				if (sassRule && sassRule.oneOf) {
+					sassRule.oneOf.forEach(rule => {
+						if (rule.test && rule.test.toString().includes('scss')) {
+							if (rule.use) {
+								rule.use.forEach(loader => {
+									if (loader.loader && loader.loader.includes('sass-loader')) {
+										// Force use of 'sass' instead of 'node-sass'
+										loader.options = {
+											...loader.options,
+											implementation: require('sass'),
+										};
+									}
+								});
+							}
+						}
+					});
+				}
+				
 				webpackConfig.optimization.splitChunks = {
 					...webpackConfig.optimization.splitChunks,
 					chunks: 'all',
 					cacheGroups,
-					// minSize: 20000,
-					// maxSize: 100000,
-					// automaticNameDelimiter: '_',
-					// cacheGroups: {
-					// 	vendors: {
-					// 		test: /[\\/]node_modules[\\/]/,
-					// 		name: 'vendors',
-					// 		chunks: 'all',
-					// 	},
-					// 	default: {
-					// 		minChunks: 2,
-					// 		priority: -20,
-					// 		reuseExistingChunk: true,
-					// 	},
-					// },
 				};
 				return webpackConfig;
 			},
