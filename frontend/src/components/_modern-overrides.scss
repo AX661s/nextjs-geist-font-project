@@ -1,0 +1,477 @@
+// ===================================
+// 现代化组件覆盖样式
+// Modern Component Overrides
+// ===================================
+
+@import '../modern-variables';
+
+// ============ 全局卡片样式 ============
+.app-bar-account,
+.app-sidebar-background,
+.sidebar-wrapper,
+.wallet-container,
+.trade-container,
+.quick-trade-wrapper,
+.dialog-content,
+.notification-wrapper {
+  background: $dark-bg-secondary !important;
+  border-radius: $border-radius-xl;
+  box-shadow: $shadow-md;
+  transition: $transition-smooth;
+  border: 1px solid $dark-border-primary;
+}
+
+// ============ Ant Design 按钮现代化 ============
+.ant-btn {
+  border-radius: $border-radius-md !important;
+  font-weight: $font-weight-medium;
+  transition: $transition-smooth;
+  box-shadow: $shadow-sm;
+  border: none !important;
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: $shadow-md;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.ant-btn-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+  
+  &:hover {
+    box-shadow: $shadow-glow, $shadow-md;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  }
+}
+
+.ant-btn-success,
+.ant-btn-primary.button-success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  
+  &:hover {
+    box-shadow: $shadow-glow-green, $shadow-md;
+    background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+  }
+}
+
+.ant-btn-danger,
+.ant-btn-primary.button-fail {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+  
+  &:hover {
+    box-shadow: $shadow-glow-red, $shadow-md;
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%) !important;
+  }
+}
+
+// ============ 输入框现代化 ============
+.ant-input,
+.ant-select-selector,
+.trade-input-wrapper input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  background: $dark-bg-tertiary !important;
+  border: 2px solid $dark-border-primary !important;
+  border-radius: $border-radius-md !important;
+  color: $dark-text-primary !important;
+  transition: $transition-smooth;
+  padding: $spacing-3 $spacing-4 !important;
+  
+  &::placeholder {
+    color: $dark-text-tertiary;
+  }
+  
+  &:focus {
+    border-color: $primary-500 !important;
+    box-shadow: $shadow-glow;
+    background: $dark-bg-secondary !important;
+    outline: none;
+  }
+  
+  &:hover:not(:focus) {
+    border-color: $dark-border-secondary !important;
+  }
+}
+
+// ============ 模态框现代化 ============
+.ant-modal-content,
+.dialog-content,
+.ReactModal__Content {
+  background: $dark-bg-secondary !important;
+  border-radius: $border-radius-2xl !important;
+  box-shadow: $shadow-2xl;
+  border: 1px solid $dark-border-primary;
+  backdrop-filter: blur(10px);
+}
+
+.ant-modal-header {
+  background: transparent !important;
+  border-bottom: 1px solid $dark-border-primary !important;
+  border-radius: $border-radius-2xl $border-radius-2xl 0 0 !important;
+}
+
+.ant-modal-footer {
+  border-top: 1px solid $dark-border-primary !important;
+  background: transparent !important;
+}
+
+// ============ 表格现代化 ============
+.ant-table,
+.trade-tab-table,
+.wallet-assets-wrapper table {
+  background: transparent !important;
+  
+  thead {
+    tr {
+      background: $dark-bg-tertiary !important;
+      
+      th {
+        background: $dark-bg-tertiary !important;
+        color: $dark-text-secondary !important;
+        font-weight: $font-weight-semibold;
+        text-transform: uppercase;
+        font-size: $font-size-xs;
+        letter-spacing: 0.5px;
+        border-bottom: 2px solid $dark-border-primary !important;
+        padding: $spacing-3 $spacing-4;
+        
+        &:first-child {
+          border-radius: $border-radius-md 0 0 0;
+        }
+        
+        &:last-child {
+          border-radius: 0 $border-radius-md 0 0;
+        }
+      }
+    }
+  }
+  
+  tbody {
+    tr {
+      background: transparent !important;
+      transition: $transition-fast;
+      
+      &:hover {
+        background: $dark-bg-tertiary !important;
+      }
+      
+      td {
+        border-bottom: 1px solid $dark-border-subtle !important;
+        color: $dark-text-primary !important;
+        padding: $spacing-3 $spacing-4;
+      }
+      
+      &:last-child td {
+        border-bottom: none !important;
+      }
+    }
+  }
+}
+
+// ============ 标签页现代化 ============
+.ant-tabs-nav,
+.trade-tabs,
+.tab-controller {
+  .ant-tabs-tab,
+  .tab-item,
+  .trade-tab {
+    padding: $spacing-2 $spacing-4;
+    border-radius: $border-radius-md $border-radius-md 0 0;
+    transition: $transition-smooth;
+    color: $dark-text-secondary;
+    font-weight: $font-weight-medium;
+    margin-right: $spacing-2;
+    
+    &:hover {
+      color: $dark-text-primary;
+      background: $dark-bg-tertiary;
+    }
+    
+    &.ant-tabs-tab-active,
+    &.active {
+      color: $primary-500;
+      background: transparent;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        border-radius: $border-radius-full;
+      }
+    }
+  }
+}
+
+.ant-tabs-nav-wrap {
+  border-bottom: 2px solid $dark-border-primary !important;
+}
+
+// ============ 导航栏现代化 ============
+.app-bar,
+.app_bar-pair-tab,
+.app-menu-bar {
+  background: $dark-bg-secondary !important;
+  box-shadow: $shadow-md;
+  border-bottom: 1px solid $dark-border-primary;
+  backdrop-filter: blur(10px);
+  
+  .app-bar-tab,
+  .app-menu-bar-content {
+    transition: $transition-smooth;
+    border-radius: $border-radius-md;
+    
+    &:hover {
+      background: $dark-bg-tertiary;
+    }
+    
+    &.active {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+      color: $primary-500;
+    }
+  }
+}
+
+// ============ 侧边栏现代化 ============
+.app-menu-sidebar,
+.sidebar-content {
+  background: $dark-bg-secondary !important;
+  border-right: 1px solid $dark-border-primary;
+  box-shadow: $shadow-lg;
+  
+  .sidebar-item {
+    transition: $transition-smooth;
+    border-radius: $border-radius-md;
+    margin: $spacing-1 $spacing-2;
+    padding: $spacing-3;
+    
+    &:hover {
+      background: $dark-bg-tertiary;
+      transform: translateX(4px);
+    }
+    
+    &.active {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+      border-left: 3px solid $primary-500;
+    }
+  }
+}
+
+// ============ 通知/提示框现代化 ============
+.ant-alert,
+.notification-content,
+.action-notification-wrapper {
+  border-radius: $border-radius-lg !important;
+  border-left: 4px solid !important;
+  box-shadow: $shadow-md;
+  backdrop-filter: blur(10px);
+}
+
+.ant-alert-info,
+.notification-info {
+  background: rgba($primary-500, 0.1) !important;
+  border-color: $primary-500 !important;
+  color: $primary-200 !important;
+}
+
+.ant-alert-success,
+.notification-success {
+  background: rgba($success-500, 0.1) !important;
+  border-color: $success-500 !important;
+  color: $success-200 !important;
+}
+
+.ant-alert-warning,
+.notification-warning {
+  background: rgba($warning-500, 0.1) !important;
+  border-color: $warning-500 !important;
+  color: $warning-200 !important;
+}
+
+.ant-alert-error,
+.notification-error {
+  background: rgba($danger-500, 0.1) !important;
+  border-color: $danger-500 !important;
+  color: $danger-200 !important;
+}
+
+// ============ Badge 现代化 ============
+.ant-badge-count,
+.badge,
+.tag {
+  border-radius: $border-radius-full !important;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  padding: $spacing-1 $spacing-2;
+  box-shadow: $shadow-sm;
+}
+
+// ============ 进度条现代化 ============
+.ant-progress-bg {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+  border-radius: $border-radius-full;
+}
+
+// ============ Switch 现代化 ============
+.ant-switch-checked {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+}
+
+// ============ 滚动条现代化 ============
+.ant-table-body,
+.trade-col,
+.wallet-assets-wrapper,
+.order-history-wrapper {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $dark-bg-primary;
+    border-radius: $border-radius-full;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $dark-bg-tertiary;
+    border-radius: $border-radius-full;
+    transition: $transition-smooth;
+    
+    &:hover {
+      background: $primary-500;
+    }
+  }
+}
+
+// ============ 快速交易现代化 ============
+.quick-trade-wrapper {
+  .quick-trade-container {
+    background: $dark-bg-secondary;
+    border-radius: $border-radius-xl;
+    padding: $spacing-6;
+    box-shadow: $shadow-lg;
+  }
+  
+  .quick-trade-button {
+    border-radius: $border-radius-lg !important;
+    font-size: $font-size-lg;
+    padding: $spacing-4 $spacing-6;
+    font-weight: $font-weight-semibold;
+  }
+}
+
+// ============ 交易界面现代化 ============
+.trade-container {
+  .orderbook-container,
+  .trade-history-container,
+  .order-entry-container {
+    background: $dark-bg-secondary;
+    border-radius: $border-radius-lg;
+    padding: $spacing-4;
+    margin: $spacing-2;
+    box-shadow: $shadow-md;
+  }
+}
+
+// ============ 钱包界面现代化 ============
+.wallet-container {
+  .wallet-assets-wrapper {
+    background: $dark-bg-secondary;
+    border-radius: $border-radius-xl;
+    padding: $spacing-4;
+    box-shadow: $shadow-md;
+  }
+  
+  .wallet-button-wrapper button {
+    margin: 0 $spacing-2;
+  }
+}
+
+// ============ 加载动画现代化 ============
+.ant-spin-dot-item {
+  background: $primary-500 !important;
+}
+
+@keyframes modernPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loader,
+.loading-wrapper {
+  animation: modernPulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+// ============ 响应式优化 ============
+@media (max-width: $bp-md) {
+  .ant-modal-content,
+  .dialog-content {
+    border-radius: $border-radius-lg !important;
+  }
+  
+  .app-bar,
+  .sidebar-content {
+    box-shadow: $shadow-md;
+  }
+}
+
+// ============ 玻璃态效果 ============
+.glass-effect {
+  background: rgba(30, 41, 59, 0.7) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+// ============ 悬浮卡片效果 ============
+.hover-card {
+  transition: $transition-smooth;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-xl;
+  }
+}
+
+// ============ 动画工具类 ============
+.fade-in {
+  animation: fadeIn $transition-normal;
+}
+
+.slide-up {
+  animation: slideUp $transition-normal;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
