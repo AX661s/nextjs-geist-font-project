@@ -1,0 +1,174 @@
+@import '../../modern-variables';
+
+.demo-account-info {
+        margin: $spacing-4 auto;
+        max-width: 600px;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+        border: 2px solid $primary-500;
+        padding: $spacing-4;
+        border-radius: $border-radius-xl;
+        box-shadow: $shadow-glow, $shadow-lg;
+        position: relative;
+        
+        .demo-account-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: $spacing-4;
+                
+                .demo-account-title {
+                        display: flex;
+                        align-items: center;
+                        gap: $spacing-2;
+                        
+                        .info-icon {
+                                font-size: $font-size-xl;
+                                color: $primary-500;
+                        }
+                        
+                        h3 {
+                                margin: 0;
+                                font-size: $font-size-lg;
+                                font-weight: $font-weight-bold;
+                                color: $dark-text-primary;
+                        }
+                }
+                
+                .close-icon {
+                        cursor: pointer;
+                        font-size: $font-size-lg;
+                        color: $dark-text-secondary;
+                        transition: $transition-smooth;
+                        padding: $spacing-2;
+                        border-radius: $border-radius-md;
+                        
+                        &:hover {
+                                color: $dark-text-primary;
+                                background: $dark-bg-tertiary;
+                        }
+                }
+        }
+        
+        .demo-account-description {
+                color: $dark-text-secondary;
+                margin-bottom: $spacing-4;
+                font-size: $font-size-sm;
+        }
+        
+        .demo-accounts-list {
+                display: flex;
+                flex-direction: column;
+                gap: $spacing-3;
+                margin-bottom: $spacing-4;
+                
+                .demo-account-item {
+                        background: $dark-bg-secondary;
+                        padding: $spacing-3;
+                        border-radius: $border-radius-lg;
+                        border-left: 4px solid $primary-500;
+                        transition: $transition-smooth;
+                        
+                        &.admin {
+                                border-left-color: $primary-500;
+                        }
+                        
+                        &.user {
+                                border-left-color: $success-500;
+                        }
+                        
+                        &:hover {
+                                transform: translateX(4px);
+                                box-shadow: $shadow-md;
+                        }
+                        
+                        .account-label {
+                                font-weight: $font-weight-semibold;
+                                color: $dark-text-primary;
+                                margin-bottom: $spacing-2;
+                                font-size: $font-size-sm;
+                        }
+                        
+                        .account-credential {
+                                display: flex;
+                                align-items: center;
+                                gap: $spacing-2;
+                                margin-bottom: $spacing-2;
+                                
+                                &:last-child {
+                                        margin-bottom: 0;
+                                }
+                                
+                                .credential-label {
+                                        color: $dark-text-tertiary;
+                                        font-size: $font-size-xs;
+                                        min-width: 45px;
+                                }
+                                
+                                .credential-value {
+                                        flex: 1;
+                                        background: $dark-bg-tertiary;
+                                        padding: $spacing-1 $spacing-2;
+                                        border-radius: $border-radius-sm;
+                                        color: $primary-400;
+                                        font-size: $font-size-sm;
+                                        font-family: $font-family-mono;
+                                        user-select: all;
+                                }
+                                
+                                .copy-icon {
+                                        cursor: pointer;
+                                        color: $dark-text-tertiary;
+                                        transition: $transition-smooth;
+                                        padding: $spacing-1;
+                                        border-radius: $border-radius-sm;
+                                        
+                                        &:hover {
+                                                color: $primary-500;
+                                                background: $dark-bg-tertiary;
+                                        }
+                                }
+                        }
+                }
+        }
+        
+        .demo-account-note {
+                background: rgba($warning-500, 0.1);
+                border: 1px solid $warning-500;
+                border-radius: $border-radius-md;
+                padding: $spacing-2 $spacing-3;
+                color: $warning-200;
+                font-size: $font-size-xs;
+                
+                strong {
+                        color: $warning-400;
+                }
+        }
+}
+
+// 响应式设计
+@media (max-width: $bp-sm) {
+        .demo-account-info {
+                margin: $spacing-2;
+                padding: $spacing-3;
+                
+                .demo-account-header {
+                        .demo-account-title {
+                                h3 {
+                                        font-size: $font-size-base;
+                                }
+                        }
+                }
+                
+                .demo-accounts-list {
+                        .demo-account-item {
+                                .account-credential {
+                                        flex-wrap: wrap;
+                                        
+                                        .credential-value {
+                                                font-size: $font-size-xs;
+                                        }
+                                }
+                        }
+                }
+        }
+}
